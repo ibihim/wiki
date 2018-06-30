@@ -20,6 +20,7 @@ $ gpg --list-secret-keys --keyid-format LONG
 
 ```bash
 $ gpg --list-secret-keys --keyid-format LONG
+
 /Users/hubot/.gnupg/secring.gpg
 ------------------------------------
 sec   4096R/3AA5C34371567BD2 2016-03-10 [expires: 2017-03-10]
