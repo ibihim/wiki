@@ -205,7 +205,7 @@ gpg> save
 
 ### Backup the secret key
 
-Includes master key and the subkey.
+Includes master key and the subkey. You might want to add `--armor` (changes format).
 
 ```bash
 $ gpg --export-secret-key 2240402E > 2240402E-secret.gpg
@@ -214,6 +214,8 @@ $ gpg --export-secret-key 2240402E > 2240402E-secret.gpg
 ### Use the YubiKey
 
 Authentication and encryption keys are created on the YubiKey.
+
+If for what ever reason it does not work on Arch Linux with 4096 bit keys, use Ubuntu from USB.
 
 ```bash
 $ gpg --edit-key 2240402E
@@ -384,7 +386,9 @@ $ gpg --delete-secret-key 2240402E
 
 ### Export public key
 
-Publish it :D
+Publish it :D This one is important.
+
+Note: if you didn't create the master key, but are reusing your old one: the public key changed. It now contains your sub keys aswell. Please update your public key.
 
 ```bash
 $ gpg --armor --export 2240402E > 2240402E.asc
